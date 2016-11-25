@@ -6,7 +6,7 @@ const bodyParser = require('body-parser')
 const morgan = require('morgan')
 
 // set the view engine to handlebars
-app.use(express.static(__dirname+'public'))
+app.use(express.static(__dirname+'/public'))
 app.set('view engine', 'hbs')
 
 
