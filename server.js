@@ -1,12 +1,12 @@
 const express = require('express')
 const app = express()
-const port = process.env.PORT || 3000
+const port = process.env.OPENSHIFT_NODEJS_PORT || 3000
 const bruinMessenger = require('./app')
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
 
 // set the view engine to handlebars
-app.use(express.static(__dirname+'/public'))
+app.use(express.static('public'))
 app.set('view engine', 'hbs')
 
 
