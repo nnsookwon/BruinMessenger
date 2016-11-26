@@ -1,4 +1,3 @@
-"use strict";
 if (process.env.NODE_ENV === 'production') {
   // Use producton environment variables
   module.exports = {

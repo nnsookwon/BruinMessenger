@@ -1,4 +1,3 @@
-"use strict";
 const crypto = require('crypto')
 
 // Middleware that checks if user is authenticated

@@ -1,4 +1,4 @@
-"use strict";
+
 // Create an IO Server instance
 
 let ioServer = app => {

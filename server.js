@@ -1,7 +1,6 @@
-"use strict";
 const express = require('express')
 const app = express()
-var port = process.env || 8080
+const port = process.env.PORT || 3000
 const bruinMessenger = require('./app')
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
@@ -31,6 +30,6 @@ app.use((req, res, next) => {
 /**
  * Set up the ioServer and listen on port `port`
  */
-bruinMessenger.ioServer(app).listen(port,() => {
+bruinMessenger.ioServer(app).listen(port, () => {
 	console.log("Started BruinMessenger on port", port);
 });
