@@ -32,6 +32,6 @@ app.use((req, res, next) => {
 /**
  * Set up the ioServer and listen on port `port`
  */
-bruinMessenger.ioServer(app).listen(port, server_ip_address,() => {
+bruinMessenger.ioServer(app).listen(port,() => {
 	console.log("Started BruinMessenger on port", port);
 });
