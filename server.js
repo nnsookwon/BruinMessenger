@@ -1,8 +1,7 @@
 "use strict";
 const express = require('express')
 const app = express()
-var port = process.env.OPENSHIFT_NODEJS_PORT || 8080,
-    server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
+var port = process.env || 8080
 const bruinMessenger = require('./app')
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
