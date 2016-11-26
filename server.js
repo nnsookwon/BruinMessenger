@@ -1,6 +1,8 @@
+"use strict";
 const express = require('express')
 const app = express()
-const port = process.env.OPENSHIFT_NODEJS_PORT || 3000
+var port = process.env.OPENSHIFT_NODEJS_PORT || 8080,
+    server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
 const bruinMessenger = require('./app')
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
@@ -30,6 +32,6 @@ app.use((req, res, next) => {
 /**
  * Set up the ioServer and listen on port `port`
  */
-bruinMessenger.ioServer(app).listen(port, () => {
+bruinMessenger.ioServer(app).listen(port, server_ip_address,() => {
 	console.log("Started BruinMessenger on port", port);
 });

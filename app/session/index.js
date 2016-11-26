@@ -1,3 +1,4 @@
+"use strict";
 const session = require('express-session')
 const config = require('../config')
 
